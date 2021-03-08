@@ -1,0 +1,9 @@
+{% extends 'banking_app/base.html' %}  
+
+{% block content %}
+<ul>
+      {% for customer in customers  %}
+         <li>{{ customer.name }}</li>
+      {% endfor  %}
+</ul>
+{% endblock %}
