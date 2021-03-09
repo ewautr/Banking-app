@@ -1,0 +1,10 @@
+{% extends 'banking_customer/base.html' %} {% block content %}
+<h2>Account activity:</h2>
+<ol>
+  {% for activity in activities %}
+  <li>{{ activity.text }}</li>
+  <hr />
+  {% endfor %} 
+</ol>
+<a href={% url 'banking_customer:index' %}>go back</a>
+{% endblock %}

@@ -25,7 +25,7 @@ SECRET_KEY = '_g$uf!ukz6j&zq9kzh_y^vx1k*6xj*w&(j*_)+&w0qix2&bo9v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.105.64.40']
+ALLOWED_HOSTS = ['172.105.64.40', '127.0.0.1']
 
 # Application definition
 
@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'banking_app',
+    'banking_customer',
+    'banking_employee',
     'login_app',
 ]
 

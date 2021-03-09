@@ -1,0 +1,27 @@
+{% extends 'banking_customer/base.html' %} {% block content %}
+<ul>
+  <h2>Your accounts:</h2>
+  {% for account in accounts %}
+  <ol>
+    <li style="display: flex; justify-content: space-between">
+      type:
+      <span style="font-size: 20px; font-weight: bold"
+        >{{ account.account_type }}</span
+      >
+      number:
+      <span style="font-size: 20px; font-weight: bold">{{ account.pk }}</span>
+      balance:
+      <span style="font-size: 20px; font-weight: bold"
+        >{{ account.balance }}</span
+      >
+      <a href="{% url 'banking_customer:activity' account_id=account.pk %}"
+        >view account activity</a
+      ><a href="{% url 'banking_customer:transfers' account_id=account.pk %}"
+        >Make a transfer</a
+      >
+    </li>
+    <hr />
+  </ol>
+  {% endfor %}
+</ul>
+{% endblock %}
